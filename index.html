@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS Consent — Advanced Careers</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 18px 24px;
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      flex: 1;
+      max-width: 680px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.1);
+      padding: 36px 40px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: #1a3a5c;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      color: #222;
+      transition: border-color 0.15s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #1a3a5c;
+    }
+
+    .consent-block {
+      margin: 22px 0 10px;
+      padding: 18px;
+      background: #f0f4f9;
+      border-left: 3px solid #1a3a5c;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .consent-check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .consent-check input[type="checkbox"] {
+      margin-top: 3px;
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      accent-color: #1a3a5c;
+    }
+
+    .consent-text {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .consent-text a {
+      color: #1a3a5c;
+      text-decoration: underline;
+    }
+
+    .disclosures {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .disclosures p {
+      margin-bottom: 4px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      margin-top: 22px;
+      padding: 13px;
+      background: #1a3a5c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .submit-btn:hover { background: #12294a; }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      padding: 20px;
+    }
+
+    footer a { color: #888; text-decoration: underline; }
+
+    @media (max-width: 520px) {
+      .card { padding: 24px 18px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Advanced Careers</h1>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Stay Updated on Your Application</h2>
+    <p class="subtitle">
+      Provide your contact information below to receive text message updates about
+      your job application status and interview scheduling from Advanced Careers.
+    </p>
+
+    <form action="#" method="post" novalidate>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input type="text" id="first_name" name="first_name" autocomplete="given-name" required />
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" id="last_name" name="last_name" autocomplete="family-name" required />
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom:14px">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+      </div>
+
+      <div class="form-group" style="margin-bottom:14px">
+        <label for="phone">Mobile Phone Number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555" required />
+      </div>
+
+      <div class="consent-block">
+        <div class="consent-check">
+          <input type="checkbox" id="sms_consent" name="sms_consent" value="1" />
+          <label for="sms_consent" class="consent-text">
+            By checking this box, I consent to receive text messages from
+            <strong>Advanced Careers</strong> regarding my job application status,
+            interview scheduling, and related recruiting communications. I understand
+            that message frequency will vary based on my application activity.
+            Message and data rates may apply. I may reply <strong>STOP</strong> at
+            any time to opt out of messages, and reply <strong>HELP</strong> for
+            assistance. Consent is not a condition of employment.
+            See our <a href="privacy.html">Privacy Policy</a> and
+            <a href="terms.html">Terms of Service</a>.
+          </label>
+        </div>
+      </div>
+
+      <div class="disclosures">
+        <p>Message and data rates may apply.</p>
+        <p>Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help.</p>
+        <p>For support, contact us at <a href="mailto:zach@getmeslushed.com">zach@getmeslushed.com</a>.</p>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+
+    </form>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Advanced Careers &nbsp;|&nbsp;
+  <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+  <a href="terms.html">Terms of Service</a>
+</footer>
+
+</body>
+</html>
